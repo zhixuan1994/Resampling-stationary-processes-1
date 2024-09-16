@@ -68,7 +68,7 @@ class fbmResample:
                 R_j.append(r_j)
             Q.append(q_i)
             R.append(R_j)
-        return [Q, R]
+        return [np.asarray(Q, dtype="object"), np.asarray(R, dtype="object")]
 
 #     Generate new path
     def sig_p(self, Q,R,m,n):
